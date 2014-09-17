@@ -189,7 +189,7 @@ module Cinch
       # @option options [Symbol, Fixnum] react_on (:message) The
       #   {file:docs/events.md event} to react on.
       # @option options [Symbol] :group (nil) The group the match belongs to.
-      # @option options [Boolean] :strip_colors (false) Strip colors
+      # @option options [Boolean] :strip_colors (nil) Strip colors
       #   from message before attempting match
       # @return [Matcher]
       # @todo Document match/listener grouping
@@ -202,7 +202,7 @@ module Cinch
           :prefix => nil,
           :suffix => nil,
           :react_on => nil,
-          :strip_colors => false,
+          :strip_colors => nil,
         }.merge(options)
         if options[:react_on]
           options[:react_on] = options[:react_on].to_s.to_sym
